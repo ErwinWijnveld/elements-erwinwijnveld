@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clipfordevice {
+    clip-path: polygon(3% 3%, calc(100% - 1.5%) 3%, calc(100% - 1.5%) calc(100% - 3%), 3% calc(100% - 3%));
+    border-radius: 11% !important;
+    overflow: hidden;
+    padding-left: 8%;
+}
+
+
+@layer components {
+    .my-hide {
+        @apply hidden;
+    }
+  }

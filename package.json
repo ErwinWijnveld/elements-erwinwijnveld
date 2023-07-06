@@ -7,8 +7,8 @@
   "author": "Erwin Wijnveld",
   "license": "MIT",
   "scripts": {
-    "build": "postcss css/tailwind.css -o css/style.css",
-    "watch": "postcss css/tailwind.css -o css/style.css -w"
+    "build": "postcss assets/styles/main.css -o assets/styles/style.css",
+    "watch": "postcss assets/styles/main.css -o assets/styles/style.css -w"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

@@ -1,13 +1,13 @@
 <?php
 /*
-        Plugin Name: Elements - Erwin Wijnveld
-        Description: Elementor widgets by Erwin Wijnveld
-        Author: Erwin Wijnveld
-        Author URI: https://erwinwijnveld.nl
-        Plugin URI: https://erwinwijnveld.nl
-        Version: 0.1.0
-        Text Domain: elements-erwinwijnveld
-    */
+	Plugin Name: Elements - Erwin Wijnveld
+	Description: Elementor widgets by Erwin Wijnveld
+	Author: Erwin Wijnveld
+	Author URI: https://erwinwijnveld.nl
+	Plugin URI: https://erwinwijnveld.nl
+	Version: 0.1.0
+	Text Domain: elements-erwinwijnveld
+*/
 
 namespace ErwinWijnveld;
 
@@ -81,12 +81,13 @@ class Widget_Loader
 
 		wp_enqueue_style(
 			'elements-erwinwijnveld-style',
-			$plugin_url . 'css/style.css'
+			$plugin_url . 'assets/styles/style.css'
 		);
 	}
 
 	public function __construct()
 	{
+		require_once __DIR__ . '/app/helpers.php';
 		add_action('wp_enqueue_scripts', [$this, 'load_plugin_css']);
 		add_action('elementor/elements/categories_registered', [
 			$this,
